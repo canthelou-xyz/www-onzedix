@@ -1,4 +1,5 @@
 import React from "react"
+import Img from "gatsby-image";
 
 const Intro = () => (
     <section className="intro part long">

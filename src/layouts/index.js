@@ -33,6 +33,7 @@ const Layout = ({
       <link rel="preload" href="https://fonts.googleapis.com/css?family=Muli:200,400,900" as="font" crossorigin="anonymous" />
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Martel+Sans:400,900" />
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:200,400,900" />
+      <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
     </Helmet>
     <Header></Header>
       {children()}

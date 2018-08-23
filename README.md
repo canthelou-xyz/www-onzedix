@@ -4,7 +4,6 @@ Pierre Canthelou Ingénieur en génie logiciel, site personnel et portfolio
 
 ### TODO ###
 
-* Passer le site en refaisant la formation React avec Gatsby
 * Transformer les image responsives natives
 * Installer Google Analytics & Hotjar
 * Installer les outils Google et tester le SEO
