@@ -1,12 +1,12 @@
 import React from "react"
 
 const AvecQuoi = () => (
-    <section class="avecquoi part rightimg large">
+    <section className="avecquoi part rightimg large">
     <a name="avec-quoi" id="avec-quoi"></a>
     <aside>
-        <img src="/medias/avecquoi.jpg" title="" />
+        <img src={require('../../public/static/avecquoi.jpg')} title="" />
     </aside>
-    <div class="content">
+    <div className="content">
         <h2>Avec quoi ?
             <span>Les outils et les techniques utilisées pour les projets</span>
         </h2>

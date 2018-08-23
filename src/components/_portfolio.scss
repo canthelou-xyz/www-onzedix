@@ -1,0 +1,30 @@
+.portfolio.part {
+    @extend .pourfairequoi.part;
+    article {
+        img.primary {
+            display: block;
+            width: 100%;
+            max-width: 640px;
+            height: auto;
+            margin: 0 auto;
+        }
+        @media (min-width:768px) {
+            display:grid;
+            grid-template-columns: 40% calc(60% - 25px);
+            grid-column-gap: 25px;
+            align-items: center;
+            h4 {
+                margin-top:0;
+            }
+            &:nth-child(2n+1){
+                grid-template-columns: calc(60% - 25px) 40%;
+                img {
+                    order: 2
+                }
+                .content {
+                    order: 1
+                }
+            }
+        }
+    }
+}

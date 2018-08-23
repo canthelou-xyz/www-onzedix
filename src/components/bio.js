@@ -1,12 +1,12 @@
 import React from "react"
 
 const Bio = () => (
-    <section class="bio part leftimg high">
+    <section className="bio part leftimg high">
     <a name="bio-lead-developpeur-mobile-internet" id="bio-lead-developpeur-mobile-internet"></a>
     <aside>
-        <img src="/medias/bio.jpg" title="" />
+        <img src={require('../../public/static/bio.jpg')} title="" />
     </aside>
-    <div class="content">
+    <div className="content">
         <h2>Biographie
             <span>Comment ais-je bien pu en arriver là ?</span>
         </h2>

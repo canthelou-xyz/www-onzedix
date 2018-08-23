@@ -1,12 +1,12 @@
 import React from "react"
 
 const IngenierieLogicielle = () => (
-    <section class="ingenierielogicielle part rightimg high">
+    <section className="ingenierielogicielle part rightimg high">
     <a name="ingenierie-logicielle" id="ingenierie-logicielle"></a>
     <aside>
-        <img src="/medias/ingenierie.jpg" title="" />
+        <img src={require('../../public/static/ingenierie.jpg')} title="" />
     </aside>
-    <div class="content">
+    <div className="content">
         <h2>Ingénierie logicielle
             <span>Une aide considérable pour vos projets</span>
         </h2>

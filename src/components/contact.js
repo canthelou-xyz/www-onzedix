@@ -1,9 +1,9 @@
 import React from "react"
 
 const Contact = () => (
-    <section class="contact part">
+    <section className="contact part">
     <a name="contact" id="contact"></a>
-    <aside><div class="mapwrapper">
+    <aside><div className="mapwrapper">
             {/* <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
             <div id='gmap_canvas' style='height:200px;width:100%;'></div>
             <script type='text/javascript'>
@@ -30,7 +30,7 @@ const Contact = () => (
             </script> */}
     </div>
     </aside>
-    <div class="content">
+    <div className="content">
         <h2>Contactez-moi
             <span>
                 <script>

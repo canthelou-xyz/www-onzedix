@@ -4,7 +4,7 @@ const PourFaireQuoi = () => (
     <section className="pourfairequoi part long">
     <a name="pour-faire-quoi" id="pour-faire-quoi"></a>
     <aside>
-        <img src="/medias/fairequoi.jpg" />
+        <img src={require('../../public/static/fairequoi.jpg')} title="" />
     </aside>
     <div className="content">
         <h2>Pour faire quoi ?

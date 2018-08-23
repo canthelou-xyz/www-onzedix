@@ -56,3 +56,6 @@ Pierre Canthelou Ingénieur en génie logiciel, site personnel et portfolio
     *Note: You'll also see a second link: `http://localhost:8000___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://next.gatsbyjs.org/tutorial/part-five/#introducing-graphiql).*
     
     Open the the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+
+5.  **Transform .kit and sass to React components!**
+

@@ -1,0 +1,62 @@
+header.main {
+    h1 {
+        margin: 3rem 0 0 0;
+    }
+    small {
+        display: block;
+        @include notes;
+    }
+    nav {
+        margin: 1rem 0;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: space-start;
+        }
+        // @media (min-width: 1024px) {
+        //     justify-content: flex-start;
+        // }
+    }
+    li {
+        display: block;
+        font-family: $bigfontfamily;
+        @media (min-width: 1024px) {
+            margin-right:2rem;
+        }
+        a {
+            display: block;
+            color: $black;
+            font-weight: $fw_bold;
+            padding: 0.3rem 0;
+            @include nohighlight;
+            &:before {
+                content: "> ";
+                opacity:0;
+            }
+            &:hover:before {
+                opacity:1;
+            }
+            &:hover {
+                @include highlight;
+                text-decoration: none;
+            }
+        }
+    }
+    .contact {
+        display: block;
+        margin: 2rem 0 0 0;
+        @media (min-width: 768px) {
+            position: absolute;
+            top: -2rem;
+            right: 0;
+        }
+        a {
+            @include button;
+            font-weight: $fw_bold;
+        }
+    }
+}

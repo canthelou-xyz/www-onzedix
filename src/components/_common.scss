@@ -1,0 +1,242 @@
+$normalfontsize: 1rem;
+$normallineheight: 1.4rem;
+$black:#222;
+$yellow:#feed04;
+$blue:#00ccff;
+$gray: #7d8f99;
+$fw_light:200;
+$fw_normal:400;
+$fw_bold:900;
+$fontfamily:"Muli";
+$bigfontfamily:"Martel Sans";
+@mixin normalfont {
+    font-family: $fontfamily;
+    font-weight: $fw_normal;
+    color: $black;
+    font-size: $normalfontsize;
+    line-height: $normallineheight;
+}
+
+@mixin grandtitre {
+    font-family: $bigfontfamily;
+    font-weight: 900;
+    font-size: 2rem;
+    line-height: 2.2rem;
+    color: $black;
+}
+
+@mixin notes {
+    @include normalfont;
+    font-weight: $fw_light;
+    color: $gray;
+}
+
+@mixin remarkable {
+    @include normalfont;
+    color: $yellow;
+    font-weight: $fw_bold;
+}
+
+@mixin drawings {
+    color: $blue;
+}
+
+@mixin highlight {
+    color: $black;
+    background: $yellow;
+    padding: 2px 15px 1px 5px;
+    display: inline-block;
+}
+
+@mixin nohighlight {
+    padding: 2px 15px 1px 5px;
+    display: inline-block;
+}
+
+@mixin button {
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    color: $black;
+    font-family: $fontfamily;
+    font-weight: $fw_normal;
+    background: $yellow;
+    display: inline-block;
+    text-decoration: none;
+    box-shadow: 0.1rem 0.3rem 0.3rem rgba(0, 0, 0, 0.2);
+    &:hover {
+        font-weight: $fw_bold;
+        box-shadow: none;
+        transform: translate(0.1rem, 0.3rem);
+        transition: all 0.25s;
+    }
+    @media (min-width: 1024px) {
+        border-radius: 6px;
+        padding: 1rem 2rem;
+        font-weight: $fw_bold;
+        font-size: 1.5rem;
+    }
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+.bodywrapper {
+    min-width: 280px;
+    width: 90%;
+    margin: 0 auto;
+    @include normalfont;
+    position: relative;
+    max-width: 900px;
+}
+
+h1 {
+    @include grandtitre;
+}
+
+h2 {
+    @include grandtitre;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+}
+
+h3 {
+    @include grandtitre;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+.part {
+    margin: 5rem 0;
+    aside {
+        height: 200px;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        img {
+            height: 100%;
+            width: auto;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #gmap_canvas {
+            img {
+                height: auto;
+                width: auto;
+                position: inherit;
+                left: auto;
+                top: auto;
+                transform: none;
+            }
+            .gmnoprint,
+            .gm-control-active {
+                display: none
+            }
+        }
+    }
+    &.leftimg {
+        aside {
+            width: 50%;
+            height: 150px;
+            float: left;
+            margin-right: 10px;
+        }
+    }
+    &.rightimg {
+        aside {
+            width: 50%;
+            height: 150px;
+            float: right;
+            margin-left: 10px;
+        }
+        h2 {
+            text-align: right;
+        }
+    }
+    &.long aside {
+        height: 300px;
+        img {
+            height: auto;
+            width: 100%;
+        }
+    }
+    &.large aside img {
+        width: 100%;
+        height: auto;
+    }
+    h2 span {
+        @include notes;
+        display: block;
+    }
+    p strong {
+        @include highlight;
+        display: inline;
+        font-weight: $fw_normal;
+    }
+    footer {
+        text-align: right
+    }
+    footer a {
+        color: $blue;
+        text-decoration: none;
+        &:hover {
+            background: $yellow;
+            color: $black;
+            &:before {
+                background: $yellow;
+                color: $black;
+            }
+        }
+    }
+    footer a:before {
+        @extend .fa;
+        @extend .fa-arrow-up;
+        color: $blue;
+        margin-right: 0.5rem;
+    }
+    @media (min-width:660px) {
+        &.leftimg {
+            aside {
+                width: 30%;
+                height: 300px;
+                margin-right: 25px;
+            }
+        }
+        &.rightimg {
+            aside {
+                width: 30%;
+                height: 300px;
+                margin-left: 25px;
+            }
+        }
+        &.leftimg aside,
+        &.rightimg aside {
+            img {
+                height: auto;
+                width: 100%;
+            }
+        }
+        &.high aside,
+        &.high aside {
+            img {
+                height: auto;
+                width: 100%;
+            }
+        }
+        &.long aside {
+            img {
+                height: 100%;
+                width: auto;
+            }
+        }
+        &.large aside img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

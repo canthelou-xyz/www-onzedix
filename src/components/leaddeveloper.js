@@ -1,12 +1,12 @@
 import React from "react"
 
 const LeadDeveloper = () => (
-    <section class="chefprojetdigital part leftimg">
+    <section className="chefprojetdigital part leftimg">
     <a name="lead-developpeur" id="lead-developpeur"></a>
     <aside>
-        <img src="/medias/lead.jpg" title="" />
+        <img src={require('../../public/static/lead.jpg')} title="" />
     </aside>
-    <div class="content">
+    <div className="content">
         <h2>Lead Developper
             <span>Le métier de guide en développement logiciel...</span>
         </h2>

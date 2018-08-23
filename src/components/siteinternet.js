@@ -4,7 +4,7 @@ const SiteInternet = () => (
     <section className="siteinternet part leftimg large">
     <a name="realisation-sites-internet" id="realisation-sites-internet"></a>
     <aside>
-        <img src="/medias/site.jpg" title="" />
+        <img src={require('../../public/static/site.jpg')} title="" />
     </aside>
     <div className="content">
         <h2>Sites internet

@@ -4,7 +4,7 @@ const Webdesign = () => (
     <section className="webdesign part rightimg large">
     <a name="web-app-design" id="web-app-design"></a>
     <aside>
-        <img src="/medias/webapp.jpg" />
+        <img src={require('../../public/static/webapp.jpg')} title="" />
     </aside>
     <div className="content">
         <h2>Web/App design

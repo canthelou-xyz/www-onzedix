@@ -4,5 +4,5 @@ module.exports = {
     description: 'Pierre Canthelou est lead developer chez Bee2Link et spécialiste frontend',
     keywords: 'Pierre Canthelou est lead developer chez Bee2Link et spécialiste frontend'
   },
-  plugins: ['gatsby-plugin-react-helmet'],
+  plugins: ['gatsby-plugin-react-helmet','gatsby-plugin-sass'],
 }

@@ -1,0 +1,23 @@
+.pourfairequoi.part {
+    .content {
+        article {
+            margin:2rem auto;
+            h4 {
+                margin-bottom:0;
+            }
+            p {
+                margin-top:0;
+                color: $gray;
+            }
+        }
+    }
+    @media (min-width:768px){
+        .articles{
+            column-count: 2;
+            column-gap: 5%;
+            article:first-child, article:first-child h4 {
+                margin-top:0;
+            }
+        }
+    }
+}

@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Header = ({ siteTitle }) => (
-<header class="main"><a name="menu" id="menu"></a>
+<header className="main"><a name="menu" id="menu"></a>
   <h1>Pierre Canthelou
         <br/>
         <small>Lead developper chez Bee2link, ingénierie logicielle, applications mobiles, web app et sites internet</small>

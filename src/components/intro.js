@@ -1,12 +1,12 @@
 import React from "react"
 
 const Intro = () => (
-    <section class="intro part long">
+    <section className="intro part long">
     <a name="intro" id="intro"></a>
     <aside>
-        <img src="/medias/head.jpg" title="" />
+        <img src={require('../../public/static/head.jpg')} title="" />
     </aside>
-    <div class="content">
+    <div className="content">
         <h2>Introduction
             <span>Qui et pour quoi ?</span>
         </h2>
