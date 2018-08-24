@@ -1,10 +1,11 @@
 import React from "react"
+import Img from "gatsby-image"
 
-const PourFaireQuoi = () => (
+const PourFaireQuoi = (props) => (
     <section className="pourfairequoi part long">
     <a name="pour-faire-quoi" id="pour-faire-quoi"></a>
     <aside>
-        <img src={require('../../public/static/fairequoi.jpg')} title="" />
+    <Img sizes={props.img.sizes} style={{ height:`100%`, display:`block` }} imgStyle={{ height:`100%`, width:`auto`, left:`50%`, transform:`translateX(-50%)` }} title="" />
     </aside>
     <div className="content">
         <h2>Pour faire quoi ?

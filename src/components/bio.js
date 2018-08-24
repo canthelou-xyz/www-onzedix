@@ -1,10 +1,11 @@
 import React from "react"
+import Img from "gatsby-image"
 
-const Bio = () => (
+const Bio = (props) => (
     <section className="bio part leftimg high">
     <a name="bio-lead-developpeur-mobile-internet" id="bio-lead-developpeur-mobile-internet"></a>
     <aside>
-        <img src={require('../../public/static/bio.jpg')} title="" />
+    <Img sizes={props.img.sizes} style={{ height:`100%`, display:`block` }} imgStyle={{ height:`100%`, width:`auto`, left:`50%`, transform:`translateX(-50%)` }} title="" />
     </aside>
     <div className="content">
         <h2>Biographie

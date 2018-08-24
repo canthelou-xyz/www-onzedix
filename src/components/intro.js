@@ -1,11 +1,11 @@
 import React from "react"
-import Img from "gatsby-image";
+import Img from "gatsby-image"
 
-const Intro = () => (
+const Intro = (props) => (
     <section className="intro part long">
     <a name="intro" id="intro"></a>
     <aside>
-        <img src={require('../../public/static/head.jpg')} title="" />
+    <Img sizes={props.img.sizes} style={{ height:`100%`, display:`block` }} imgStyle={{ height:`100%`, width:`auto`, left:`50%`, transform:`translateX(-50%)` }} title="" />
     </aside>
     <div className="content">
         <h2>Introduction

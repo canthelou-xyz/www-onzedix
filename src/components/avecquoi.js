@@ -1,10 +1,11 @@
 import React from "react"
+import Img from "gatsby-image"
 
-const AvecQuoi = () => (
+const AvecQuoi = (props) => (
     <section className="avecquoi part rightimg large">
     <a name="avec-quoi" id="avec-quoi"></a>
     <aside>
-        <img src={require('../../public/static/avecquoi.jpg')} title="" />
+    <Img sizes={props.img.sizes} style={{ height:`100%`, display:`block` }} imgStyle={{ height:`100%`, width:`auto`, left:`50%`, transform:`translateX(-50%)` }} title="" />
     </aside>
     <div className="content">
         <h2>Avec quoi ?

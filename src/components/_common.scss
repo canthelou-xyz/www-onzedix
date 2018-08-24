@@ -116,7 +116,7 @@ h3 {
         width: 100%;
         overflow: hidden;
         position: relative;
-        img {
+        .gatsby-image-outer-wrapper {
             height: 100%;
             width: auto;
             position: absolute;
@@ -160,12 +160,12 @@ h3 {
     }
     &.long aside {
         height: 300px;
-        img {
+        .gatsby-image-outer-wrapper {
             height: auto;
             width: 100%;
         }
     }
-    &.large aside img {
+    &.large aside .gatsby-image-outer-wrapper {
         width: 100%;
         height: auto;
     }
@@ -216,20 +216,20 @@ h3 {
         }
         &.leftimg aside,
         &.rightimg aside {
-            img {
+            .gatsby-image-outer-wrapper {
                 height: auto;
                 width: 100%;
             }
         }
         &.high aside,
         &.high aside {
-            img {
+            .gatsby-image-outer-wrapper {
                 height: auto;
                 width: 100%;
             }
         }
         &.long aside {
-            img {
+            .gatsby-image-outer-wrapper {
                 height: 100%;
                 width: auto;
             }
