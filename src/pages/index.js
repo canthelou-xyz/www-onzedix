@@ -9,7 +9,6 @@ import PourFaireQuoi from "../components/pourfairequoi"
 import AvecQuoi from "../components/avecquoi"
 import Bio from "../components/bio"
 import Contact from "../components/contact"
-import MentionsLegales from "../components/mentionslegales"
 
 export const query = graphql`
   query IntroImageQuery {
@@ -68,7 +67,6 @@ const IndexPage = ({data}) => (
     {/* <Portfolio></Portfolio> */}
     <Bio img={data.bioImage}></Bio>
     <Contact></Contact>
-    {/* <MentionsLegales></MentionsLegales> */}
   </div>
 )
 

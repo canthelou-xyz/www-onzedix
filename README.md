@@ -4,7 +4,6 @@ Pierre Canthelou Ingénieur en génie logiciel, site personnel et portfolio
 
 ### TODO ###
 
-* Coder le lazyload des images et leur apparition selon le scroll _nativement si existe_
 * Coder l'apparition des mentions légales en popin _nativement si existe_
 * Coder l'apparition d'un formulaire de contact en popin _nativement si existe_
 * Ajouter et coder le mode PWA

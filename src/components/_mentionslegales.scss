@@ -1,0 +1,41 @@
+.infoslegales {
+    box-sizing: border-box;
+    padding:5%;
+    border:0;
+    width: 80%;
+    height: 50vh;
+    transform: translate(-50%,-50%);
+    position: fixed;
+    left:50%;
+    top:50%;
+    overflow-y: scroll;
+    background:#fff;
+    z-index:-1;
+    display:block;
+    opacity:0;
+    transition: opacity 0.25s;
+    &.show {
+        z-index:2;
+        opacity:1;
+        transition: opacity 0.25s  0.2s;
+    }
+}
+
+.overlay {
+    content:" ";
+    width:100vw;
+    height:100vh;
+    position: fixed;
+    top:0;
+    left:0;
+    background:rgba(32,32,32,0.9);
+    z-index:-1;
+    display:block;
+    opacity:0;
+    transition: opacity 1s;
+    &.show {
+        z-index:1;
+        opacity:1;
+        transition: opacity 0.25s;
+    }
+}

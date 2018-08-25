@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 
 import Header from '../components/header'
 import Footer from '../components/footer'
+import MentionsLegales from "../components/mentionslegales"
 import './styles.scss'
 
 export const query = graphql`
@@ -86,6 +87,8 @@ const Layout = ({
     <Header></Header>
       {children()}
     <Footer></Footer>
+    <MentionsLegales link="#legals"></MentionsLegales>
+    <div className="overlay"></div>
   </div>
 )
 
