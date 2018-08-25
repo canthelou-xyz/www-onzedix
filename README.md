@@ -4,8 +4,6 @@ Pierre Canthelou Ingénieur en génie logiciel, site personnel et portfolio
 
 ### TODO ###
 
-* Transformer les image responsives natives
-* Installer Google Analytics & Hotjar
 * Installer les outils Google et tester le SEO
 * Clic sur une entrée du menu descend doucement en animation
 * Clic sur "Menu" remonte doucement en animation
@@ -58,3 +56,55 @@ Pierre Canthelou Ingénieur en génie logiciel, site personnel et portfolio
 
 5.  **Transform .kit and sass to React components!**
 
+
+### IMAGES RESPONSIVES ###
+
+1. ** Setup **
+
+    ```json
+    plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `img`,
+        path: `${__dirname}/src/img/`
+      }
+    },
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sass',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp'
+    ],
+    ```
+
+    ```js
+    export const query = graphql`
+    query IntroImageQuery {
+        avecquoiImage: imageSharp(id: { regex: "/avecquoi/" }) {  
+        sizes(quality:90) {
+            ...GatsbyImageSharpSizes_noBase64
+        }
+        }
+
+    ...
+
+    <Intro img={data.introImage}></Intro>
+    ```
+
+2. ** Usage **
+
+    ```js
+    import Img from "gatsby-image"
+
+    const Intro = (props) => (
+        <section className="intro part long">
+        <a name="intro" id="intro"></a>
+        <aside>
+        <Img sizes={props.img.sizes} style={{ height:`100%`, display:`block` }} imgStyle={{ height:`100%`, width:`auto`, left:`50%`, transform:`translateX(-50%)` }} title="" />
+    ```
+
+### INSTALLER GOOGLE ANALYTICS & HOTJAR ###
+
+```sh
+npm install --save gatsby-plugin-google-analytics
+```
