@@ -4,9 +4,6 @@ Pierre Canthelou Ingénieur en génie logiciel, site personnel et portfolio
 
 ### TODO ###
 
-* Installer les outils Google et tester le SEO
-* Clic sur une entrée du menu descend doucement en animation
-* Clic sur "Menu" remonte doucement en animation
 * Coder le lazyload des images et leur apparition selon le scroll _nativement si existe_
 * Coder l'apparition des mentions légales en popin _nativement si existe_
 * Coder l'apparition d'un formulaire de contact en popin _nativement si existe_
@@ -150,5 +147,15 @@ https://github.com/jlengstorf/lengstorf.com/blob/master/src/components/SEO.js
       <script type="application/ld+json">
         {JSON.stringify(schemaOrgJSONLD(data))}
       </script>
+```
+
+### SMOOTH SCROLLING ###
+
+```css
+body,
+html {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
 ```
 
