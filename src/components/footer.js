@@ -1,18 +1,18 @@
 import React from "react";
-import { OutboundLink } from 'gatsby-plugin-google-analytics';
+import { OutboundLink } from "gatsby-plugin-google-analytics";
 
 const Footer = () => (
     <footer className="main">
     <nav className="secondary">
         <ul>
             <li>
-                <i className="fa fa-medium"></i> <a href="https://medium.com/@onzedix">Blog</a>
+                <i className="fa fa-medium"></i> <OutboundLink href="https://medium.com/@onzedix">Blog</OutboundLink>
             </li>
             <li>
-                <i className="fa fa-git"></i> <a href="https://github.com/onzedix">Codes</a>
+                <i className="fa fa-git"></i> <OutboundLink href="https://github.com/onzedix">Codes</OutboundLink>
             </li>
             <li>
-                <i className="fa fa-codepen"></i> <a href="https://codepen.io/onzedix/">Pens</a>
+                <i className="fa fa-codepen"></i> <OutboundLink href="https://codepen.io/onzedix/">Pens</OutboundLink>
             </li>
         </ul>
     </nav>

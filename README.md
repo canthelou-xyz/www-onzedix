@@ -107,4 +107,48 @@ Pierre Canthelou Ingénieur en génie logiciel, site personnel et portfolio
 
 ```sh
 npm install --save gatsby-plugin-google-analytics
+npm install --save gatsby-plugin-hotjar
 ```
+
+### SEO ###
+
+https://github.com/jlengstorf/lengstorf.com/blob/master/src/components/SEO.js
+
+```js
+    const metas = (data) => ([
+    { name: 'description', content: data.site.siteMetadata.description },
+    { name: 'keywords', content: data.site.siteMetadata.keywords },
+    { property: 'og:locale', content: data.site.siteMetadata.locale },
+    { property: 'og:url', content: data.site.siteMetadata.url },
+    { property: 'og:title', content: data.site.siteMetadata.title },
+    { property: 'og:description', content: data.site.siteMetadata.description },
+    { property: 'og:site_name', content: data.site.siteMetadata.creator },
+    { property: 'og:image', content: data.site.siteMetadata.logo },
+    { property: 'twitter:card', content: data.site.siteMetadata.title },
+    { property: 'twitter:creator', content: data.site.siteMetadata.creator },
+    { property: 'twitter:title',content: data.site.siteMetadata.title },
+    { property: 'twitter:description',content: data.site.siteMetadata.description },
+    { property: 'twitter:image:src', content: data.site.siteMetadata.logo },
+    { property: 'twitter:domain', content: data.site.siteMetadata.url },
+    { property: 'twitter:site', content: data.site.siteMetadata.twitter }
+    ]);
+
+
+      {
+        metas(data).map((meta,index) =>
+          <meta key={index} property={meta.property} content={meta.content} />
+        )
+      }
+      
+      {
+        data.site.siteMetadata.others.map((other,index) =>
+          <meta key={index} property="og:see_also" content={other} />
+        )
+      }
+
+      <link rel="canonical" href={data.site.siteMetadata.url} />
+      <script type="application/ld+json">
+        {JSON.stringify(schemaOrgJSONLD(data))}
+      </script>
+```
+
